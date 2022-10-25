@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class Base
+{
+    public:
+      virtual void msg()
+      {
+          cout<<"Base class function"<<endl;
+      }
+};
+
+class derived : public Base
+{
+    public:
+      void msg()
+      {
+          cout<<"Derived class function"<<endl;
+      }  
+};
+
+int main()
+{
+    Base *ptr;
+    ptr = new derived;
+    ptr->msg();
+    
+    return 0;
+}
+
+
+OUTPUT:-
+
+Derived class function
