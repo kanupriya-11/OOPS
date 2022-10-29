@@ -1,0 +1,77 @@
+1. Showing the Without Abstraction Case:-
+
+#include <iostream>
+using namespace std;
+
+class a
+{
+    private:
+    
+       int a,b;
+   
+    public:
+    
+       void set(int x, int y)
+         {
+          a = x;
+          b = y;
+         }
+       void displ()
+       {
+          cout<<a+b;
+       }
+};
+int main()
+{
+    a obj;
+    obj.set(10,20);
+    obj.displ();
+}
+
+OUTPUT:-
+30
+
+
+
+
+2. Showing Abstraction Case:-
+
+#include <iostream>
+using namespace std;
+
+class a
+{
+    private:
+    
+       int a,b;
+
+       void set(int x, int y)
+         {
+          a = x;
+          b = y;
+         }
+         
+    public:
+    
+       void displ()
+       {
+          cout<<a+b;
+       }
+};
+int main()
+{
+    a obj;
+    obj.set(10,20);
+    obj.displ();
+}
+
+
+OUTPUT:-
+
+/tmp/PgF4DaRqlB.cpp: In function 'int main()':
+/tmp/PgF4DaRqlB.cpp:24:18: error: 'void a::set(int, int)' is private within this context
+   24 |     obj.set(10,20);
+      |                  ^
+/tmp/PgF4DaRqlB.cpp:9:13: note: declared private here
+    9 |        void set(int x, int y)
+      |             ^~~
