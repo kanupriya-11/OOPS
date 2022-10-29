@@ -1,0 +1,94 @@
+1. Code - just for binding "data members" and "member functions"
+
+
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+  public:
+    // Variables required for area calculation
+    int length;
+    int breadth;
+
+    // Constructor to initialize variables
+    Rectangle(int len, int brth) : length(len), breadth(brth) {}
+
+    // Function to calculate area
+    int getArea() {
+      return length * breadth;
+    }
+};
+
+int main() {
+  // Create object of Rectangle class
+  Rectangle rect(8, 6);
+
+  // Call getArea() function
+  cout << "Area = " << rect.getArea();
+
+  return 0;
+}
+
+
+
+2.  Data Hiding using - Getter ans Setter 
+
+
+ #include <iostream>
+using namespace std;
+
+class Rectangle {
+   private:
+
+    // Variables required for area calculation
+    int length;
+    int breadth;
+
+   public:
+
+    // Setter function for length
+    void setLength(int len) {
+      length = len;
+    }
+
+    // Setter function for breadth
+    void setBreadth(int brth) {
+      breadth = brth;
+    }
+
+    // Getter function for length
+    int getLength() {
+      return length;
+    }
+
+    // Getter function for breadth
+    int getBreadth() {
+      return breadth;
+    }
+    // Function to calculate area
+    int getArea() {
+      return length * breadth;
+    }
+};
+
+int main() {
+  // Create object of Rectangle class
+  Rectangle rectangle1;
+
+  // Initialize length using Setter function
+  rectangle1.setLength(8);
+
+  // Initialize breadth using Setter function
+  rectangle1.setBreadth(6);
+
+  // Access length using Getter function
+  cout << "Length = " << rectangle1.getLength() << endl;
+
+  // Access breadth using Getter function
+  cout << "Breadth = " << rectangle1.getBreadth() << endl;
+
+  // Call getArea() function
+  cout << "Area = " << rectangle1.getArea();
+
+  return 0;
+}
