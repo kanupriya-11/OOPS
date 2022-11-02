@@ -11,7 +11,9 @@ Control Abstraction – This type only shows the required information about the 
 
 ## Abstraction can be implemented using:-
 
-1. Abstraction using Classes
+1. Abstraction using Classes (Abstract class)
 2. Abstraction in Header files
 3. Abstraction using Access Specifiers
+
+
 
